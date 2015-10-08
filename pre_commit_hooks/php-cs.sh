@@ -47,7 +47,7 @@ phpcs_args=$1
 escape_comma="/,"
 phpcs_args_parsed="${phpcs_args:escape_comma:,}"
 phpcs_command="$phpcs_command $phpcs_args_parsed $phpcs_files_to_check"
-
+echo "Command: [$phpcs_command]"
 echo "Running command $phpcs_command"
 command_result=`eval $phpcs_command`
 if [[ $command_result =~ ERROR ]]
